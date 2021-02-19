@@ -28,6 +28,6 @@ extension Bridgeable {
     }
     
     public func shutdown() {
-        pools.values.forEach { $0.shutdown() }
+        pools.values.forEach { $0.syncShutdownGracefully() }
     }
 }
